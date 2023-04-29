@@ -139,8 +139,19 @@
     <h2 class="page-header deftu-header">Other</h2>
     <div class="other">
         <div class="avatars">
-            <Avatar width="128px" height="128px" src="https://github.com/Deftu.png" alt="deftu" />
-            <Avatar width="128px" height="128px" src="https://github.com/Deftu.png" alt="deftu" circle />
+            <Avatar
+                width="128px"
+                height="128px"
+                src="https://github.com/Deftu.png"
+                alt="deftu"
+            />
+            <Avatar
+                width="128px"
+                height="128px"
+                src="https://github.com/Deftu.png"
+                alt="deftu"
+                circle
+            />
             <Avatar width="128px" height="128px" />
             <Avatar width="128px" height="128px" circle />
         </div>

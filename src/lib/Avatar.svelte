@@ -15,13 +15,25 @@
 </script>
 
 {#if !src || !$loaded}
-<div class="avatar-placeholder" style="width: {width}; height: {height}" class:circle>
-    <ImageBrokenIcon width="50%" height="50%" />
-</div>
+    <div
+        class="avatar-placeholder"
+        style="width: {width}; height: {height}"
+        class:circle
+    >
+        <ImageBrokenIcon width="50%" height="50%" />
+    </div>
 {:else}
-<img on:error={() => {
-    loaded.set(false);
-}} class="avatar" {width} {height} src={src} alt={alt} class:circle />
+    <img
+        on:error={() => {
+            loaded.set(false);
+        }}
+        class="avatar"
+        {width}
+        {height}
+        {src}
+        {alt}
+        class:circle
+    />
 {/if}
 
 <style>
