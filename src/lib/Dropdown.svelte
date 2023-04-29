@@ -9,10 +9,7 @@
     export let value: string | null = null;
     export let items: string[] = [];
 
-    const totalItems = [
-        "Select an item",
-        ...items
-    ];
+    const totalItems = ["Select an item", ...items];
 
     let dropdown = null;
     let eventListener = null;
@@ -36,19 +33,26 @@
 </script>
 
 <div bind:this={dropdown} class="dropdown">
-    <button on:click={() => {
-        selected.update((value) => !value);
-    }} class="dropdown-button" class:selected={$selected}>
+    <button
+        on:click={() => {
+            selected.update((value) => !value);
+        }}
+        class="dropdown-button"
+        class:selected={$selected}
+    >
         <span>{value ?? "Select an item"}</span>
         <ChevronIcon direction={$selected ? "up" : "down"} />
     </button>
 
     <div class="dropdown-items" class:visible={$selected}>
         {#each totalItems as item}
-            <button on:click={() => {
-                value = item === "Select an item" ? null : item;
-                selected.set(false);
-            }} class:selected={value === item}>
+            <button
+                on:click={() => {
+                    value = item === "Select an item" ? null : item;
+                    selected.set(false);
+                }}
+                class:selected={value === item}
+            >
                 {item}
             </button>
         {/each}

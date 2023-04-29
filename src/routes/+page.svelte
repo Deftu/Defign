@@ -51,9 +51,18 @@
     </div>
 
     <div class="selectors">
-        <ChipGroup bind:value={$chipGroupStore} items={["Chip 1", "Chip 2", "Chip 3"]} />
-        <Dropdown bind:value={$dropdownStore1} items={["Item 1", "Item 2", "Item 3"]} />
-        <Dropdown bind:value={$dropdownStore2} items={["Item 1", "Item 2", "Item 3"]} />
+        <ChipGroup
+            bind:value={$chipGroupStore}
+            items={["Chip 1", "Chip 2", "Chip 3"]}
+        />
+        <Dropdown
+            bind:value={$dropdownStore1}
+            items={["Item 1", "Item 2", "Item 3"]}
+        />
+        <Dropdown
+            bind:value={$dropdownStore2}
+            items={["Item 1", "Item 2", "Item 3"]}
+        />
     </div>
 </div>
 

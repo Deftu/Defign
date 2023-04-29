@@ -22,21 +22,23 @@
     });
 </script>
 
-<Button on:click={() => {
-    if (value != null) {
-        copied.set(true);
-        navigator.clipboard.writeText(value);
-    }
-}}>
+<Button
+    on:click={() => {
+        if (value != null) {
+            copied.set(true);
+            navigator.clipboard.writeText(value);
+        }
+    }}
+>
     <div class="copy-button">
         {#if text != null}
             <span>{text}</span>
         {/if}
 
         {#if $copied}
-        <CheckIcon {color} />
+            <CheckIcon {color} />
         {:else}
-        <ClipboardIcon {color} />
+            <ClipboardIcon {color} />
         {/if}
     </div>
 </Button>

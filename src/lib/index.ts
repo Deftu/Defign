@@ -10,4 +10,14 @@ import ChevronIcon from "$lib/icons/ChevronIcon.svelte";
 
 import CopyButton from "$lib/extras/CopyButton.svelte";
 
-export { Button, ButtonType, Checkbox, ChipGroup, Dropdown, ClipboardIcon, CheckIcon, ChevronIcon, CopyButton };
+export {
+    Button,
+    ButtonType,
+    Checkbox,
+    ChipGroup,
+    Dropdown,
+    ClipboardIcon,
+    CheckIcon,
+    ChevronIcon,
+    CopyButton
+};
