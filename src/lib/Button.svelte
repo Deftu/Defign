@@ -6,6 +6,7 @@
 </script>
 
 <button
+    on:click
     class="btn"
     class:primary={type === ButtonType.Primary}
     class:secondary={type === ButtonType.Secondary}
@@ -17,9 +18,11 @@
 
 <style>
     .btn {
+        --focus-outline-color: var(--deftu-primary);
+
         border: none;
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 5px;
         color: var(--deftu-text);
         cursor: pointer;
         transition: transform 0.1s ease-in-out;
@@ -38,15 +41,17 @@
     }
 
     .btn.danger {
+        --focus-outline-color: var(--deftu-danger);
         background-color: var(--deftu-danger);
     }
 
     .btn.warning {
+        --focus-outline-color: var(--deftu-warning);
         background-color: var(--deftu-warning);
     }
 
     .btn:focus {
-        outline: solid 2px var(--deftu-primary);
+        outline: solid 2px var(--focus-outline-color);
         outline-offset: 1px;
     }
 </style>
