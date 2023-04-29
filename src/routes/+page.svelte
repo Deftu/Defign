@@ -8,7 +8,11 @@
 <Button type="danger">Click me!</Button>
 <Button type="warning">Click me!</Button>
 <Button>
-    <img width="100" height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png" />
+    <img
+        width="100"
+        height="50"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png"
+    />
 </Button>
 
 <style>
