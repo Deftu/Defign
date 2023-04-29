@@ -9,10 +9,7 @@
     export let value: string | null = null;
     export let items: string[] = [];
 
-    const totalItems = [
-        "Select an item",
-        ...items
-    ];
+    const totalItems = ["Select an item", ...items];
 
     let dropdown: HTMLElement | null = null;
     let eventListener: ((this: Document, event: Event) => any) | null = null;
