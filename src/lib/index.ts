@@ -1,5 +1,4 @@
 import Button from "$lib/Button.svelte";
-import { ButtonType } from "./types.js";
 import Checkbox from "$lib/Checkbox.svelte";
 import ChipGroup from "$lib/ChipGroup.svelte";
 import Dropdown from "$lib/Dropdown.svelte";
@@ -16,7 +15,6 @@ import Modal from "$lib/extras/Modal.svelte";
 
 export {
     Button,
-    ButtonType,
     Checkbox,
     ChipGroup,
     Dropdown,

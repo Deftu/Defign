@@ -1,17 +1,17 @@
 <script lang="ts">
-    import "$lib/global.css";
+    import "./global.css";
     import { ButtonType } from "$lib";
 
-    export let type = ButtonType.Primary;
+    export let type: "primary" | "secondary" | "danger" | "warning" = "primary";
 </script>
 
 <button
     on:click
     class="btn deftu-body"
-    class:primary={type === ButtonType.Primary}
-    class:secondary={type === ButtonType.Secondary}
-    class:danger={type === ButtonType.Danger}
-    class:warning={type === ButtonType.Warning}
+    class:primary={type === "primary"}
+    class:secondary={type === "secondary"}
+    class:danger={type === "danger"}
+    class:warning={type === "warning"}
 >
     <slot />
 </button>

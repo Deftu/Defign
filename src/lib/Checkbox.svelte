@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "$lib/global.css";
+    import "./global.css";
     import { CheckIcon } from "$lib";
 
     export let value: boolean = false;

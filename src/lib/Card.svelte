@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "$lib/global.css";
+    import "./global.css";
 
     export let width: string = "100%";
     export let height: string = "100%";

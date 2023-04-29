@@ -1,6 +1,6 @@
 {
-    "name": "defign",
-    "version": "0.0.1",
+    "name": "@deftu/defign",
+    "version": "0.1.2",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && npm run package",
@@ -24,7 +24,8 @@
         "!dist/**/*.spec.*"
     ],
     "peerDependencies": {
-        "svelte": "^3.54.0"
+        "svelte": "^3.54.0",
+        "@sveltejs/kit": "^1.5.0"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "^2.0.1",
@@ -41,5 +42,15 @@
     },
     "svelte": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "type": "module"
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Deftu/Defign.git"
+    },
+    "author": "Deftu",
+    "license": "LGPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Deftu/Defign/issues"
+    },
+    "homepage": "https://github.com/Deftu/Defign#readme"
 }

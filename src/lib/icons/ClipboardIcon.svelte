@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "$lib/global.css";
+    import "../global.css";
 
     export let color: string = "var(--deftu-text)";
     export let width: string = "24px";
