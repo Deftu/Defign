@@ -12,8 +12,10 @@
     const totalItems = ["Select an item", ...items];
 
     let dropdown: HTMLElement | null = null;
-    let clickEventListener: ((this: Document, event: Event) => any) | null = null;
-    let focusEventListener: ((this: Document, event: Event) => any) | null = null;
+    let clickEventListener: ((this: Document, event: Event) => any) | null =
+        null;
+    let focusEventListener: ((this: Document, event: Event) => any) | null =
+        null;
     const selected = writable(false);
 
     onMount(() => {
@@ -52,8 +54,10 @@
 
     onDestroy(() => {
         if (browser) {
-            if (clickEventListener) document.removeEventListener("click", clickEventListener);
-            if (focusEventListener) document.removeEventListener("focus", focusEventListener);
+            if (clickEventListener)
+                document.removeEventListener("click", clickEventListener);
+            if (focusEventListener)
+                document.removeEventListener("focus", focusEventListener);
         }
     });
 </script>
