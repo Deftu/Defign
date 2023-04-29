@@ -39,4 +39,4 @@ jobs:
               with:
                   prettier: true
                   prettier_dir: '.'
-                  prettier_extensions: ''
+                  prettier_extensions: '*'
