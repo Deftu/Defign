@@ -1,0 +1,33 @@
+name: Prettier
+
+on:
+    pull_request:
+        branches: '*'
+        paths-ignore:
+            - 'README.md'
+            - '.gitignore'
+    push:
+        branches: '*'
+        paths-ignore:
+            - 'README.md'
+            - '.gitignore'
+    workflow_dispatch:
+
+permissions:
+    checks: write
+    contents: write
+
+jobs:
+    prettier:
+        name: Prettier
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out
+              uses: actions/checkout@v2
+
+            - name: Lint Action
+              uses: wearerequired/lint-action@v2.3.0
+              with:
+                  prettier: true
+                  prettier_dir: '.'
