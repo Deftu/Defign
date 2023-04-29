@@ -1,6 +1,6 @@
 <script lang="ts">
     import "./global.css";
-    import { ImageBrokenIcon } from "$lib";
+    import { ImageBrokenIcon } from "./index.js";
 
     import { writable } from "svelte/store";
 

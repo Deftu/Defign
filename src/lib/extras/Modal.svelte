@@ -1,6 +1,5 @@
 <script lang="ts">
     import "../global.css";
-    import { Card } from "$lib";
 
     import { onMount, onDestroy } from "svelte";
     import { browser } from "$app/environment";
@@ -59,7 +58,7 @@
                                 ).indexOf(
                                     document.activeElement as HTMLElement
                                 );
-                                focusableElements[index - 1].focus();
+                                (focusableElements[index - 1] as HTMLElement).focus();
                             }
                         } else {
                             if (document.activeElement === lastElement) {
@@ -70,7 +69,7 @@
                                 ).indexOf(
                                     document.activeElement as HTMLElement
                                 );
-                                focusableElements[index + 1].focus();
+                                (focusableElements[index + 1] as HTMLElement).focus();
                             }
                         }
                     }

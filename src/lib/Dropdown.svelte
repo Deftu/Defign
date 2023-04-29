@@ -1,6 +1,6 @@
 <script lang="ts">
     import "./global.css";
-    import { ChevronIcon } from "$lib";
+    import { ChevronIcon } from "./index.js";
 
     import { onMount, onDestroy } from "svelte";
     import { browser } from "$app/environment";

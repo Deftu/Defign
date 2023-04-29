@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../global.css";
-    import { Button, ClipboardIcon, CheckIcon } from "$lib";
+    import { Button, ClipboardIcon, CheckIcon } from "../index.js";
 
     import { writable } from "svelte/store";
 

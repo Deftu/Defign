@@ -1,6 +1,6 @@
 <script lang="ts">
     import "./global.css";
-    import { CheckIcon } from "$lib";
+    import { CheckIcon } from "./index.js";
 
     export let value: string | null = null;
     export let items: string[] = [];

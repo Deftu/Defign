@@ -1,6 +1,5 @@
 <script lang="ts">
     import "./global.css";
-    import { ButtonType } from "$lib";
 
     export let type: "primary" | "secondary" | "danger" | "warning" = "primary";
 </script>
