@@ -9,10 +9,14 @@
 <div class="chip-group">
     {#each items as item}
         <button on:click={() => {
-            value = item;
-        }} class="chip" class:selected={value === item}>
+            if (value === item) {
+                value = null;
+            } else {
+                value = item;
+            }
+        }} class="chip deftu-body" class:selected={value === item}>
             {#if value === item}
-                <CheckIcon width="18px" height="18px" />
+                <CheckIcon width="15px" height="15px" />
             {/if}
 
             {item}

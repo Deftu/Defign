@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit");
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
 :root {
     --deftu-primary: #c33f3f;
 
@@ -21,4 +24,17 @@
         --deftu-text-faded: rgba(40, 40, 43, 0.65);
         --deftu-text-disabled: rgba(51, 51, 51, 0.25);
     }
+}
+
+.deftu-header {
+    font-family: "Outfit", sans-serif;
+}
+
+.deftu-body {
+    font-family: "Inter", sans-serif;
+}
+
+.deftu-header,
+.deftu-body {
+    color: var(--deftu-text);
 }

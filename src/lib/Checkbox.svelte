@@ -5,7 +5,7 @@
     export let value: boolean = false;
 </script>
 
-<div class="checkbox-container">
+<div class="checkbox-container deftu-body">
     <div class="interactable-container">
         <input type="checkbox" bind:checked={value} class="checkbox" />
         <div class="checkbox-icon">

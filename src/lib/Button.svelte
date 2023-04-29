@@ -7,7 +7,7 @@
 
 <button
     on:click
-    class="btn"
+    class="btn deftu-body"
     class:primary={type === ButtonType.Primary}
     class:secondary={type === ButtonType.Secondary}
     class:danger={type === ButtonType.Danger}
