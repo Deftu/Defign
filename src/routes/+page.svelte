@@ -1,6 +1,14 @@
 <script lang="ts">
     import "$lib/global.css";
-    import { Button, CopyButton, Checkbox, ChipGroup, Dropdown, Card, Modal } from "$lib";
+    import {
+        Button,
+        CopyButton,
+        Checkbox,
+        ChipGroup,
+        Dropdown,
+        Card,
+        Modal
+    } from "$lib";
 
     import { writable } from "svelte/store";
     import { onMount } from "svelte";
@@ -44,13 +52,18 @@
 <div class="components">
     <Modal bind:this={modal}>
         <h1 class="page-header deftu-header">Modal</h1>
-        <p class="deftu-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, cupiditate deleniti. Inventore fugit repellat placeat totam accusantium, temporibus expedita sit quis ad molestiae iusto, omnis est amet odit possimus laboriosam!</p>
+        <p class="deftu-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+            cupiditate deleniti. Inventore fugit repellat placeat totam
+            accusantium, temporibus expedita sit quis ad molestiae iusto, omnis
+            est amet odit possimus laboriosam!
+        </p>
         <Button
             on:click={() => {
                 modal?.hide();
             }}
-            type="primary"
-        >Close</Button>
+            type="primary">Close</Button
+        >
     </Modal>
 
     <h1 class="page-header deftu-header">Components</h1>
@@ -66,8 +79,8 @@
             on:click={() => {
                 modal?.show();
             }}
-            type="primary"
-        >Show Modal</Button>
+            type="primary">Show Modal</Button
+        >
 
         <CopyButton value="Copied text 1" />
         <CopyButton text="Copy" value="Copied text 2" />
@@ -81,10 +94,38 @@
 
     <h2 class="page-header deftu-header">Selectors</h2>
     <div class="selectors">
-        <ChipGroup bind:value={$chipGroupStore} items={["Chip 1", "Chip 2", "Chip 3"]} />
-        <Dropdown bind:value={$dropdownStore1} items={["Item 1", "Item 2", "Item 3"]} />
-        <Dropdown bind:value={$dropdownStore2} items={["Item 1", "Item 2", "Item 3"]} />
-        <Dropdown bind:value={$dropdownStore3} items={["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15"]} />
+        <ChipGroup
+            bind:value={$chipGroupStore}
+            items={["Chip 1", "Chip 2", "Chip 3"]}
+        />
+        <Dropdown
+            bind:value={$dropdownStore1}
+            items={["Item 1", "Item 2", "Item 3"]}
+        />
+        <Dropdown
+            bind:value={$dropdownStore2}
+            items={["Item 1", "Item 2", "Item 3"]}
+        />
+        <Dropdown
+            bind:value={$dropdownStore3}
+            items={[
+                "Item 1",
+                "Item 2",
+                "Item 3",
+                "Item 4",
+                "Item 5",
+                "Item 6",
+                "Item 7",
+                "Item 8",
+                "Item 9",
+                "Item 10",
+                "Item 11",
+                "Item 12",
+                "Item 13",
+                "Item 14",
+                "Item 15"
+            ]}
+        />
     </div>
 
     <h2 class="page-header deftu-header">Cards</h2>

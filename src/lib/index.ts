@@ -12,4 +12,16 @@ import ChevronIcon from "$lib/icons/ChevronIcon.svelte";
 import CopyButton from "$lib/extras/CopyButton.svelte";
 import Modal from "$lib/extras/Modal.svelte";
 
-export { Button, ButtonType, Checkbox, ChipGroup, Dropdown, Card, ClipboardIcon, CheckIcon, ChevronIcon, CopyButton, Modal };
+export {
+    Button,
+    ButtonType,
+    Checkbox,
+    ChipGroup,
+    Dropdown,
+    Card,
+    ClipboardIcon,
+    CheckIcon,
+    ChevronIcon,
+    CopyButton,
+    Modal
+};

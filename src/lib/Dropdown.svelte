@@ -17,12 +17,19 @@
 
     onMount(() => {
         if (browser) {
-            document.addEventListener("click", eventListener = (event) => {
-                const target = event.target as HTMLElement;
-                if (dropdown && target != null && !dropdown.contains(target)) {
-                    selected.set(false);
-                }
-            });
+            document.addEventListener(
+                "click",
+                (eventListener = (event) => {
+                    const target = event.target as HTMLElement;
+                    if (
+                        dropdown &&
+                        target != null &&
+                        !dropdown.contains(target)
+                    ) {
+                        selected.set(false);
+                    }
+                })
+            );
         }
     });
 
@@ -36,19 +43,27 @@
 </script>
 
 <div bind:this={dropdown} class="dropdown deftu-body">
-    <button on:click={() => {
-        selected.update((value) => !value);
-    }} class="dropdown-button deftu-body" class:selected={$selected}>
+    <button
+        on:click={() => {
+            selected.update((value) => !value);
+        }}
+        class="dropdown-button deftu-body"
+        class:selected={$selected}
+    >
         <span>{value ?? "Select an item"}</span>
         <ChevronIcon direction={$selected ? "up" : "down"} />
     </button>
 
     <div class="dropdown-items" class:visible={$selected}>
         {#each totalItems as item}
-            <button on:click={() => {
-                value = item === "Select an item" ? null : item;
-                selected.set(false);
-            }} class="deftu-body" class:selected={value === item}>
+            <button
+                on:click={() => {
+                    value = item === "Select an item" ? null : item;
+                    selected.set(false);
+                }}
+                class="deftu-body"
+                class:selected={value === item}
+            >
                 {item}
             </button>
         {/each}

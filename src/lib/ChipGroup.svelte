@@ -8,13 +8,17 @@
 
 <div class="chip-group">
     {#each items as item}
-        <button on:click={() => {
-            if (value === item) {
-                value = null;
-            } else {
-                value = item;
-            }
-        }} class="chip deftu-body" class:selected={value === item}>
+        <button
+            on:click={() => {
+                if (value === item) {
+                    value = null;
+                } else {
+                    value = item;
+                }
+            }}
+            class="chip deftu-body"
+            class:selected={value === item}
+        >
             {#if value === item}
                 <CheckIcon width="15px" height="15px" />
             {/if}

@@ -14,11 +14,11 @@
 </script>
 
 {#if visible}
-<div class="modal-background">
-    <div class="modal">
-        <slot />
+    <div class="modal-background">
+        <div class="modal">
+            <slot />
+        </div>
     </div>
-</div>
 {/if}
 
 <style>
