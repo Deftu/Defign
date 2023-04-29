@@ -58,7 +58,9 @@
                                 ).indexOf(
                                     document.activeElement as HTMLElement
                                 );
-                                (focusableElements[index - 1] as HTMLElement).focus();
+                                (
+                                    focusableElements[index - 1] as HTMLElement
+                                ).focus();
                             }
                         } else {
                             if (document.activeElement === lastElement) {
@@ -69,7 +71,9 @@
                                 ).indexOf(
                                     document.activeElement as HTMLElement
                                 );
-                                (focusableElements[index + 1] as HTMLElement).focus();
+                                (
+                                    focusableElements[index + 1] as HTMLElement
+                                ).focus();
                             }
                         }
                     }
