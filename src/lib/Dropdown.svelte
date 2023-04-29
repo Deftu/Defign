@@ -12,14 +12,15 @@
     const totalItems = ["Select an item", ...items];
 
     let dropdown: HTMLElement | null = null;
-    let eventListener: ((this: Document, event: Event) => any) | null = null;
+    let clickEventListener: ((this: Document, event: Event) => any) | null = null;
+    let focusEventListener: ((this: Document, event: Event) => any) | null = null;
     const selected = writable(false);
 
     onMount(() => {
         if (browser) {
             document.addEventListener(
                 "click",
-                (eventListener = (event) => {
+                (clickEventListener = (event) => {
                     const target = event.target as HTMLElement;
                     if (
                         dropdown &&
@@ -30,14 +31,29 @@
                     }
                 })
             );
+
+            document.addEventListener(
+                "focus",
+                (focusEventListener = (event) => {
+                    console.log("focus");
+                    const target = event.target as HTMLElement;
+                    if (
+                        dropdown &&
+                        target != null &&
+                        !dropdown.contains(target)
+                    ) {
+                        selected.set(false);
+                    }
+                }),
+                true
+            );
         }
     });
 
     onDestroy(() => {
         if (browser) {
-            if (eventListener) {
-                document.removeEventListener("click", eventListener);
-            }
+            if (clickEventListener) document.removeEventListener("click", clickEventListener);
+            if (focusEventListener) document.removeEventListener("focus", focusEventListener);
         }
     });
 </script>
@@ -102,8 +118,18 @@
         background-color: var(--deftu-background-1);
     }
 
+    .dropdown-button:focus {
+        outline: solid 2px var(--deftu-primary);
+        outline-offset: 1px;
+    }
+
     .dropdown-items {
         display: none;
+    }
+
+    .dropdown-items:focus {
+        outline: solid 2px var(--deftu-primary);
+        outline-offset: 1px;
     }
 
     .dropdown-items.visible {
@@ -151,5 +177,10 @@
 
     .dropdown-items.visible button:hover {
         background-color: var(--deftu-background-1);
+    }
+
+    .dropdown-items.visible button:focus {
+        outline: solid 2px var(--deftu-primary);
+        outline-offset: 1px;
     }
 </style>

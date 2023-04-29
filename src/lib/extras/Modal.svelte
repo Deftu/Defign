@@ -2,20 +2,80 @@
     import "$lib/global.css";
     import { Card } from "$lib";
 
+    import { onMount, onDestroy } from "svelte";
+    import { browser } from "$app/environment";
+
     export let visible: boolean = false;
+
+    let modal: HTMLElement | null = null;
+    let keyEventListener: ((this: Document, event: KeyboardEvent) => any) | null = null;
 
     export function show() {
         visible = true;
+        modal?.focus();
     }
 
     export function hide() {
         visible = false;
     }
+
+    onMount(() => {
+        if (browser) {
+            if (visible) {
+                modal?.focus();
+            }
+
+        document.addEventListener(
+            "keydown",
+            (keyEventListener = (event) => {
+                if (event.key === "Escape") {
+                    hide();
+                }
+
+                if (event.key === "Tab") {
+                    event.preventDefault();
+
+                    if (!visible) return;
+
+                    const focusableElements = modal?.querySelectorAll(
+                        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+                    );
+                    if (focusableElements == null) return;
+
+                    const firstElement = focusableElements[0] as HTMLElement;
+                    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+                    if (event.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            lastElement.focus();
+                        } else {
+                            const index = Array.from(focusableElements).indexOf(document.activeElement as HTMLElement);
+                            focusableElements[index - 1].focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            firstElement.focus();
+                        } else {
+                            const index = Array.from(focusableElements).indexOf(document.activeElement as HTMLElement);
+                            focusableElements[index + 1].focus();
+                        }
+                    }
+                }
+            })
+        );
+        }
+    });
+
+    onDestroy(() => {
+        if (browser) {
+            if (keyEventListener) document.removeEventListener("keydown", keyEventListener);
+        }
+    });
 </script>
 
 {#if visible}
     <div class="modal-background">
-        <div class="modal">
+        <div bind:this={modal} class="modal" role="dialog" tabindex="-1">
             <slot />
         </div>
     </div>

@@ -52,4 +52,9 @@
     .chip.selected {
         background-color: var(--deftu-primary);
     }
+
+    .chip:focus {
+        outline: solid 2px var(--deftu-primary);
+        outline-offset: 1px;
+    }
 </style>
