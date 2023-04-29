@@ -36,9 +36,9 @@
         {/if}
 
         {#if $copied}
-            <CheckIcon {color} />
+            <CheckIcon width="18px" height="18px" {color} />
         {:else}
-            <ClipboardIcon {color} />
+            <ClipboardIcon width="18px" height="18px" {color} />
         {/if}
     </div>
 </Button>
