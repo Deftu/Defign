@@ -7,6 +7,7 @@
         ChipGroup,
         Dropdown,
         Card,
+        Avatar,
         Modal
     } from "$lib";
 
@@ -134,6 +135,16 @@
             <h1 class="page-header deftu-header">Card</h1>
         </Card>
     </div>
+
+    <h2 class="page-header deftu-header">Other</h2>
+    <div class="other">
+        <div class="avatars">
+            <Avatar width="128px" height="128px" src="https://github.com/Deftu.png" alt="deftu" />
+            <Avatar width="128px" height="128px" src="https://github.com/Deftu.png" alt="deftu" circle />
+            <Avatar width="128px" height="128px" />
+            <Avatar width="128px" height="128px" circle />
+        </div>
+    </div>
 </div>
 
 <style>
@@ -174,6 +185,17 @@
     .cards {
         display: flex;
         flex-direction: column;
+        gap: 8px;
+    }
+
+    .other {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .other .avatars {
+        display: flex;
         gap: 8px;
     }
 </style>
