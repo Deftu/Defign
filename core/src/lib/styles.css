@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit");
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+:root {
+    --defign-primary: #c33f3f;
+
+    --defign-danger: #e92727;
+    --defign-warning: #daaa3c;
+
+    --defign-background-1: #28282b;
+    --defign-background-2: #212125;
+
+    --defign-text: #fdfbf9;
+    --defign-text-faded: rgba(210, 205, 198, 0.65);
+    --defign-text-disabled: rgba(210, 205, 198, 0.25);
+
+    --defign-font-header: "Outfit", sans-serif;
+    --defign-font-body: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --defign-background-1: #dddddd;
+        --defign-background-2: #d1d1d1;
+
+        --defign-text: #28282b;
+        --defign-text-faded: rgba(40, 40, 43, 0.65);
+        --defign-text-disabled: rgba(51, 51, 51, 0.25);
+    }
+}
+
+[class*="defign-header"] {
+    font-family: var(--defign-font-header);
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1.defign-header,
+.defign-header1 {
+    font-size: 50px;
+    line-height: 63px;
+}
+
+h2.defign-header,
+.defign-header2 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+h3.defign-header,
+.defign-header3 {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.defign-body {
+    font-family: var(--defign-font-body);
+}
+
+[class*="defign-header"],
+.defign-body,
+.defign-text {
+    color: var(--defign-text);
+}
