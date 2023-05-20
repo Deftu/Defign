@@ -14,14 +14,6 @@
     },
     "exports": {
         "./styles.css": "./dist/styles.css",
-        "./dialog": {
-            "types": "./dist/dialog/index.d.ts",
-            "svelte": "./dist/dialog/index.js"
-        },
-        "./extras": {
-            "types": "./dist/extras/index.d.ts",
-            "svelte": "./dist/extras/index.js"
-        },
         "./icons": {
             "types": "./dist/icons/index.d.ts",
             "svelte": "./dist/icons/index.js"
